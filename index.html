@@ -1,14 +1,36 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <title>Bhumika Boutique</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Georgia', serif;
     background: linear-gradient(to right, #ffe6f0, #fff0f5);
+}
+
+/* Navbar */
+.navbar {
+    background: #cc0066;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
 }
 
 /* Header */
@@ -33,10 +55,9 @@ body {
 /* Section Title */
 .section-title {
     text-align: center;
-    margin: 40px 0 20px;
+    margin: 50px 0 20px;
     font-size: 28px;
     color: #cc0066;
-    position: relative;
 }
 
 .section-title::after {
@@ -81,10 +102,37 @@ body {
     color: #555;
 }
 
-/* WhatsApp Button */
+/* About */
+.about {
+    text-align: center;
+    padding: 20px 40px;
+    color: #444;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
 .btn {
     display: inline-block;
-    margin: 30px auto;
+    margin: 20px 10px;
     padding: 14px 30px;
     background: #25d366;
     color: white;
@@ -96,6 +144,14 @@ body {
 
 .btn:hover {
     background: #1ebe5d;
+}
+
+.insta-btn {
+    background: #E1306C;
+}
+
+.insta-btn:hover {
+    background: #c72a5e;
 }
 
 /* Footer */
@@ -111,12 +167,18 @@ body {
 
 <body>
 
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+</div>
+
 <div class="header">
     <h1>Bhumika Boutique</h1>
     <p>Elegant Fashion for Every Occasion</p>
 </div>
 
-<h2 class="section-title">Our Services</h2>
+<h2 class="section-title" id="services">Our Services</h2>
 
 <div class="services">
     <div class="box">
@@ -145,14 +207,31 @@ body {
     </div>
 </div>
 
+<h2 class="section-title">About Us</h2>
+<div class="about">
+    <p>At Bhumika Boutique, we create timeless fashion pieces with love and elegance. 
+    Our designs are crafted to make you feel confident and beautiful on every occasion.</p>
+</div>
+
+<h2 class="section-title" id="gallery">Our Collection</h2>
+<div class="gallery">
+    <img src="https://images.unsplash.com/photo-1520975922284-3d3b5f6e7d30">
+<img src="https://images.unsplash.com/photo-1495121605193-b116b5b09a73">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+</div>
+
 <div style="text-align:center;">
 <a class="btn" href="https://wa.me/919817406809" target="_blank">
 Order on WhatsApp
 </a>
+
+<a class="btn insta-btn" href="#" target="_blank">
+Visit Instagram
+</a>
 </div>
 
 <div class="footer">
-� 2026 Bhumika Boutique | Yamunanagar
+© 2026 Bhumika Boutique | Yamunanagar
 </div>
 
 </body>
